@@ -1,0 +1,778 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guarantee Service Center</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
+    <link rel="icon" href="./images/Logo Guarantee Service Center.png" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="bg-black">
+    <!-- Navigation -->
+    <nav id="navbar" class="navbar">
+      <div class="max-w-7xl mx-auto px-6 py-2">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2 text-white">
+             <div class="logo">
+              <img src="images/Logo Guarantee Service Center.png" alt="Logo" />
+            </div>
+          </div>
+
+          <!-- Desktop Menu -->
+          <div class="hidden md:flex items-center gap-8">
+            <!-- <a
+              href="index.html"
+              class="text-white hover:text-orange-500 transition-colors"
+              >Home</a
+            >
+            <a -->
+              <!-- href="Aboutus.html"
+              class="text-white hover:text-blue transition-colors"
+              >About Us</a
+            >
+            <a
+              href="contactus.html"
+              class="text-white hover:text-orange-500 transition-colors"
+              >Contact Us</a
+            > -->
+            <button
+  onclick="window.open('https://wa.me/919495945495?text=Hello,%0A%0AI%20need%20washing%20machine%20servicing.%0A%0ABrand:%20%0AModel:%20%0AIssue:%20%0ALocation:%20%0AContact%20Number:%20%0A%0APlease%20confirm%20availability.', '_blank');"
+  class="bg-orange-500 text-white px-6 py-2 rounded-full hover:bg-orange-600 transition-all font-semibold">
+  Contact Us
+</button>
+
+
+          </div>
+
+          <!-- Mobile Menu Button -->
+          <button id="mobile-menu-btn" class="md:hidden text-black">
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              ></path>
+            </svg>
+          </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4">
+          <a
+            href="index.html"
+            class="block text-white hover:text-orange-500 py-2 transition-colors"
+            >Home</a
+          >
+          <a
+            href="Aboutus.html"
+            class="text-white hover:text-blue transition-colors"
+            >About Us</a
+          >
+          <a
+            href="contactus.html"
+            class="block text-white hover:text-orange-500 py-2 transition-colors"
+            >Contact Us</a
+          >
+          <button
+            onclick="window.location.href='#'; return false;"
+            class="w-full text-left bg-orange-500 text-white px-4 py-2 rounded-full mt-2 hover:bg-orange-600 transition-all 
+            font-semibold"
+          >Login</button
+          >
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="relative h-screen overflow-hidden">
+      <!-- Carousel Background -->
+      <div class="hero-bg absolute inset-0">
+        <div class="hero-carousel">
+          <img src="images/19817040_Bosch_PLC_Washer-finder_CTM_1200x676.webp" class="carousel-img active" />
+          <img src="images/27875370_Bosch_FitsNeeds_WRB247C9GB_800x450.webp" class="carousel-img" />
+          <img src="images/2306.i518.019.F.m005.c9.realistic washing machine color set.jpg" class="carousel-img" />
+          <img src="images/EP_Blog_banner_psd_5_Best_Front_Load_Washing_Machine.jpg" class="carousel-img"/>
+          <img src="images/interior-of-modern-laundry-room-with-washing-machine-basket-and-towels-generative-ai-photo.jpeg" class="carousel-img"/>
+          <img src="images/smart_inverter_fully_automatic_washing_machines_1760610513654_1760610518841.jpg" class="carousel-img"/>
+          
+        </div>
+      </div>
+
+      <!-- Content -->
+      <div
+      class="hero-content relative z-10 h-full flex flex-col items-center justify-center text-white px-6"
+      >
+      <div class="herocontent">
+      
+        <h1 class="text-7xl md:text-9xl mb-6 text-center font-bold opacity-0" style="font-size: 40px;">
+          Trusted Washing Machine Service Experts
+        </h1>
+
+        <p class="text-2xl md:text-4xl text-center mb-12 max-w-3xl opacity-0" style="font-size: 20px;">
+          Expert Washing Machine Repair Quick, Affordable & Guaranteed
+        </p>
+      </div>
+      </div>
+    </section>
+    <!-- Brand Logo Carousel -->
+<div class="brand-carousel">
+  <div class="brand-track">
+    <img src="images/Siemens_Energy_logo.svg.png" alt="Siemens">
+    <img src="images/Electrolux_logo_master_blue_RGB.png" alt="Electrolux">
+    
+    <img src="images/Godrej_Logo.svg.png" alt="Godrej">
+
+    <!-- Duplicate for smooth infinite scroll -->
+    <img src="images/Samsung_logo_blue.png" alt="Siemens">
+    <img src="images/images (9).png" alt="Electrolux">
+    <img src="images/Whirlpool_Corporation_Logo.png" alt="Videocon">
+    <img src="images/Haier_logo.svg.png" alt="Godrej">
+    <img src="images/images (10).png" alt="Godrej">
+    <img src="images/images (12).png" alt="Godrej" >
+    <img src="images/images (11).png" alt="Godrej">
+  </div>
+</div>
+
+
+    <!-- Reveal Section -->
+    <section id="reveal-section" class="relative h-[200vh]">
+      <div class="sticky top-0 h-screen overflow-hidden">
+        <div class="reveal-bg absolute inset-0">
+          <div
+            class="w-full h-full bg-cover bg-center"
+            style="background-image: url(&quot;images/frpwmpcxfufl.webp&quot;)"
+          ></div>
+          <div class="absolute inset-0 bg-black/40"></div>
+        </div>
+
+        <div
+          class="reveal-content relative z-10 h-full flex items-center justify-center px-6"
+        >
+          <div class="max-w-5xl mx-auto text-center text-white">
+            <h2 class="reveal-title text-5xl md:text-7xl mb-6 font-bold">
+              Professional Washing Machine Repair
+            </h2>
+            <p class="reveal-subtitle text-xl md:text-2xl mb-12">
+              Certified Washing Machine Repair – Fast, Reliable & Affordable Service
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-20">
+              <div
+                class="reveal-feature bg-white/10 backdrop-blur-md rounded-2xl p-8"
+              >
+                <h3 class="text-2xl mb-3 font-bold">Doorstep Service</h3>
+                <p class="text-gray-300">
+                  Get professional washing machine repair service right at your home. Our skilled technicians visit your location fully equipped to diagnose and fix the issue quickly and efficiently no need to transport your appliance.
+                </p>
+              </div>
+              <div
+                class="reveal-feature bg-white/10 backdrop-blur-md rounded-2xl p-8"
+              >
+                <h3 class="text-2xl mb-3 font-bold">1–2 Hour Quick Response</h3>
+                <p class="text-gray-300">
+                  Facing urgent washing machine problems? We offer fast response within 1–2 hours to ensure minimal disruption to your daily routine. Quick diagnosis and same-day repair solutions guaranteed.
+                </p>
+              </div>
+              <div
+                class="reveal-feature bg-white/10 backdrop-blur-md rounded-2xl p-8"
+              >
+                <h3 class="text-2xl mb-3 font-bold">Warranty on Repairs</h3>
+                <p class="text-gray-300">
+                  Enjoy peace of mind with warranty-backed washing machine repairs. We use genuine spare parts and provide service assurance to ensure long-lasting performance and customer satisfaction.
+                </p>
+              </div>
+               <div
+                class="reveal-feature bg-white/10 backdrop-blur-md rounded-2xl p-8"
+              >
+                <h3 class="text-2xl mb-3 font-bold">Affordable Pricing</h3>
+                <p class="text-gray-300">
+                  Transparent and budget-friendly washing machine repair services with no hidden charges. Get high-quality repairs at competitive prices with upfront cost estimates.                
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sticky Sections -->
+    <div class="bg-white">
+      <!-- Sticky Section 1 -->
+      <section
+        class="sticky-section h-screen flex items-center justify-center sticky top-0"
+      >
+        <div
+          class="sticky-content max-w-7xl mx-auto px-6 w-full flex flex-col md:flex-row items-center gap-12 opacity-0"
+        >
+          <div class="flex-1">
+            <h2 class="text-5xl md:text-7xl mb-6 font-bold" style="font-size: 50px;">Why Choose Our Washing Machine Repair Service?</h2>
+            <p class="text-xl md:text-2xl text-gray-600" style="font-size: 20px;">
+              We provde hassle-free washing machine repair at your home. Our trained technicians arrive fully equipped to diagnose and fix the problem on-site, saving you time and transportation costs.
+
+              <br>✔ 1–2 Hour Quick Response
+              <br>✔ Warranty on Repairs
+              <br>✔ Affordable & Transparent Pricing <br>
+              Book Your Washing Machine Repair Today Fast, Reliable & Affordable Service Near You!
+            </p>
+          </div>
+          <div class="flex-1">
+            <div
+              class="relative h-[400px] md:h-[600px] rounded-3xl overflow-hidden shadow-2xl"
+            >
+              <img
+                src="images/high-angle-man-working-as-plumber.jpg"
+                alt="Gym"
+                class="w-full h-full object-cover"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sticky Section 2 -->
+      <section
+        class="sticky-section h-screen flex items-center justify-center sticky top-0 bg-white"
+      >
+        <div
+          class="sticky-content max-w-7xl mx-auto px-6 w-full flex flex-col md:flex-row-reverse items-center gap-12 opacity-0"
+        >
+          <div class="flex-1">
+            <h2 class="text-5xl md:text-7xl mb-6 font-bold" style="font-size: 50px;">
+             Brands We Service            </h2>
+            <p class="text-xl md:text-2xl text-gray-600" style="font-size: 20px;">
+              We repair all types of washing machines including front-load, top-load, fully automatic, and semi-automatic models from:
+             <br>LG Washing Machine 
+
+            <br>Samsung Washing Machine
+
+           <br>Whirlpool Washing Machine 
+          <br>IFB Washing Machine 
+
+          <br>Bosch Washing Machine 
+
+          <br>Panasonic Washing Machine 
+
+         <br>Godrej Washing Machine 
+
+         <br>Siemens Washing Machine Repair
+            </p>
+          </div>
+          <div class="flex-1">
+            <div
+              class="relative h-[400px] md:h-[600px] rounded-3xl overflow-hidden shadow-2xl"
+            >
+              <img
+                src="images/black-washing-machine-black-background_1040322-13000 (1).webp"
+                alt="Training"
+                class="w-full h-full object-cover"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sticky Section 3 -->
+      <section
+        class="sticky-section h-screen flex items-center justify-center sticky top-0 bg-white"
+      >
+        <div
+          class="sticky-content max-w-7xl mx-auto px-6 w-full flex flex-col md:flex-row items-center gap-12 opacity-0"
+        >
+          <div class="flex-1">
+            <h2 class="text-5xl md:text-7xl mb-6 font-bold" style="font-size: 50px;">
+              Professional Installation Services
+            </h2>
+            <p class="text-xl md:text-2xl text-gray-600">
+             Ensure your washing machine is installed safely and correctly from day one. We handle setup, connections, and testing for smooth and secure operation.
+            </p>
+          </div>
+          <div class="flex-1">
+            <div
+              class="relative h-[400px] md:h-[600px] rounded-3xl overflow-hidden shadow-2xl"
+            >
+              <img
+                src="images/high-angle-man-working-as-plumber.jpg"
+                alt="Classes"
+                class="w-full h-full object-cover"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sticky Section 4 -->
+      <section
+        class="sticky-section h-screen flex items-center justify-center sticky top-0 bg-white"
+      >
+        <div
+          class="sticky-content max-w-7xl mx-auto px-6 w-full flex flex-col md:flex-row-reverse items-center gap-12 opacity-0"
+        >
+          <div class="flex-1">
+            <h2 class="text-5xl md:text-7xl mb-6 font-bold " style="font-size: 50px;">
+               Fast Response Immediate Solutions            </h2>
+            <p class="text-xl md:text-2xl text-gray-600">
+              <h2 style="font-size: 30px;">Keep Your Machine Running Like New</h2>
+
+            When your washing machine stops working, our emergency team moves fast. Accurate diagnostics, quality parts, and expert repairs — right when you need them most.
+            </p>
+          </div>
+          <div class="flex-1">
+            <div
+              class="relative h-[400px] md:h-[600px] rounded-3xl overflow-hidden shadow-2xl"
+            >
+              <img
+                src="images/19817040_Bosch_PLC_Washer-finder_CTM_1200x676.webp"
+                alt="Training"
+                class="w-full h-full object-cover"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sticky Section 5 -->
+      <section
+        class="sticky-section h-screen flex items-center justify-center sticky top-0 bg-white"
+      >
+        <div
+          class="sticky-content max-w-7xl mx-auto px-6 w-full flex flex-col md:flex-row items-center gap-12 opacity-0"
+        >
+          <div class="flex-1">
+            <h2 class="text-5xl md:text-7xl mb-6 font-bold" style="font-size: 50px;">
+              We Bring Your Machine Back to Life            </h2>
+            <p class="text-xl md:text-2xl text-gray-600"> 
+              No more laundry stress. Our experienced team quickly identifies the issue and fixes it efficiently, saving you time and unnecessary expenses.
+
+              Convenient booking. Honest pricing. Guaranteed workmanship.
+            </p>
+          </div>
+          <div class="flex-1">
+            <div
+              class="relative h-[400px] md:h-[600px] rounded-3xl overflow-hidden shadow-2xl"
+            >
+              <img
+                src="images/Gemini_Generated_Image_h82bclh82bclh82b.png"
+                alt="Training"
+                class="w-full h-full object-cover"
+              />
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- Sticky Section 6 -->
+      <section
+        class="sticky-section h-screen flex items-center justify-center sticky top-0 bg-white"
+      >
+        <div
+          class="sticky-content max-w-7xl mx-auto px-6 w-full flex flex-col md:flex-row-reverse items-center gap-12 opacity-0"
+        >
+          <div class="flex-1">
+            <h2 class="text-5xl md:text-7xl mb-6 font-bold">
+              About Us
+
+            </h2>
+            <p class="text-xl md:text-2xl text-gray-600" style="font-size: 20px;">
+             Our mission is simple — to provide high-quality washing machine servicing with transparent pricing, genuine spare parts, and guaranteed customer satisfaction.
+             <br><h2 style="font-size: 30px;">Who We Are</h2><br>
+             We are a team of skilled and certified washing machine repair experts committed to offering doorstep repair services with quick response times. Whether your washing machine is not spinning, leaking water, making unusual noise, or not starting at all — we provide accurate diagnosis and long-lasting repair solutions.
+            </p>
+          </div>
+          
+          <div class="flex-1">
+            <div
+              class="relative h-[400px] md:h-[600px] rounded-3xl overflow-hidden shadow-2xl"
+            >
+              <img
+                src="images/interior-of-modern-laundry-room-with-washing-machine-basket-and-towels-generative-ai-photo.jpeg"
+                alt="Training"
+                class="w-full h-full object-cover"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  }
+
+  .stats {
+    background: linear-gradient(135deg, #4299e1 0%, #3182ce 100%);
+    color: white;
+    padding: 80px 20px;
+  }
+
+  .stats-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    text-align: center;
+  }
+
+  .stat-number {
+    font-size: 3.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    display: block;
+  }
+
+  .stat-label {
+    font-size: 1.1rem;
+    opacity: 0.9;
+  }
+
+  @media (max-width: 768px) {
+    .stat-number {
+      font-size: 2.5rem;
+    }
+  }
+</style>
+</head>
+
+<body>
+
+<div class="stats">
+  <div class="stats-container">
+    
+    <div class="stat-item">
+      <span class="stat-number" data-target="100">0</span>
+      <span class="stat-label">Active Users</span>
+    </div>
+
+    <div class="stat-item">
+      <span class="stat-number" data-target="98">0</span>
+      <span class="stat-label">Satisfaction Rate</span>
+    </div>
+
+  </div>
+</div>
+
+<script>
+  const counters = document.querySelectorAll(".stat-number");
+
+  counters.forEach(counter => {
+    const target = +counter.getAttribute("data-target");
+    const duration = 2000;
+    const increment = target / (duration / 16);
+    let current = 0;
+
+    const updateCounter = () => {
+      current += increment;
+      if (current >= target) {
+        if (counter.nextElementSibling.textContent.includes("Rate")) {
+          counter.textContent = target + "%";
+        } else {
+          counter.textContent = target + "+";
+        }
+      } else {
+        counter.textContent = Math.floor(current);
+        requestAnimationFrame(updateCounter);
+      }
+    };
+
+    updateCounter();
+  });
+</script>
+    
+
+    
+    <!-- Features Section -->
+    <section id="facilities" class="bg-black py-32 px-6">
+      <div class="max-w-7xl mx-auto">
+        <h2
+          class="text-6xl md:text-7xl text-white text-center mb-20 font-bold fade-in-element"
+        >
+          Built for Performance
+        </h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+          <div class="feature-item text-center text-white">
+            <div
+              class="inline-flex items-center justify-center w-20 h-20 bg-orange-500 rounded-full mb-6"
+            >
+              <svg
+                class="w-10 h-10"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"
+                ></path>
+              </svg>
+            </div>
+            <h3 class="text-2xl mb-3 font-bold">Guaranteed Service Quality</h3>
+            <p class="text-gray-400 text-lg">
+              Warranty-backed repairs for complete peace of mind.
+            </p>
+          </div>
+
+          <div class="feature-item text-center text-white">
+            <div
+              class="inline-flex items-center justify-center w-20 h-20 bg-orange-500 rounded-full mb-6"
+            >
+              <svg
+                class="w-10 h-10"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
+                ></path>
+              </svg>
+            </div>
+            <h3 class="text-2xl mb-3 font-bold">Certified Experts</h3>
+            <p class="text-gray-400 text-lg">
+              Certified Experts for servicing 
+            </p>
+          </div>
+
+          
+
+          <div class="feature-item text-center text-white">
+            <div
+              class="inline-flex items-center justify-center w-20 h-20 bg-orange-500 rounded-full mb-6"
+            >
+              <svg
+                class="w-10 h-10"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"
+                ></path>
+              </svg>
+            </div>
+            <h3 class="text-2xl mb-3 font-bold">Advanced Repair Technology</h3>
+            <p class="text-gray-400 text-lg">
+              Precision diagnostics for accurate problem detection.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Parallax Section 2 -->
+    <section class="parallax-section relative h-screen overflow-hidden">
+      <div class="parallax-bg absolute inset-0 w-full h-[120%]">
+        <div
+          class="w-full h-full bg-cover bg-center"
+          style="background-image: url(&quot;images/2306.i518.019.F.m005.c9.realistic washing machine color set.jpg&quot;)"
+        ></div>
+        <div class="absolute inset-0 bg-black/40"></div>
+      </div>
+
+      <div
+        class="parallax-content relative z-10 h-full flex flex-col items-center justify-center text-white px-6"
+      >
+        <h2 class="text-5xl md:text-8xl mb-6 text-center max-w-4xl font-bold">
+          Train Like Never Before
+        </h2>
+        <p class="text-xl md:text-3xl text-center max-w-2xl">
+          Advanced training spaces built to unlock your full potential.
+        </p>
+      </div>
+    </section>
+
+
+    <!-- CTA Section -->
+    <section id="book-now" class="bg-black py-32 px-6">
+      <div class="max-w-4xl mx-auto text-center text-white">
+        <h2 class="text-6xl md:text-7xl mb-8 font-bold fade-in-element">
+          Ready to Begin?
+        </h2>
+        <p class="text-2xl text-gray-400 mb-12 fade-in-element">
+          Join the elite. Book your session today.
+        </p>
+        <div
+          class="flex flex-col sm:flex-row gap-6 justify-center fade-in-element"
+        >
+          <button
+            class="bg-orange-500 text-white px-12 py-5 rounded-full text-xl hover:bg-orange-600 transition-all hover:scale-110 font-bold"
+          >
+            <a href="contactus.html">Contact Us</a>
+          </button>
+        </div>
+      </div>
+    </section>
+    <!-- Contact Section -->
+<section id="contact" class="bg-black py-24 px-6">
+  <div class="max-w-7xl mx-auto">
+
+    <h2 class="text-5xl md:text-6xl font-bold text-center text-white mb-16">
+      Contact Guarantee Service Center
+    </h2>
+
+    <!-- Contact Info Cards -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-10 mb-20">
+
+      <!-- Visit Us -->
+      <div class="bg-gray-900 p-8 rounded-2xl text-center border border-gray-800 hover:border-orange-500 transition">
+        <i class="fas fa-map-marker-alt text-4xl text-orange-500 mb-4"></i>
+        <h3 class="text-2xl font-bold text-white mb-2">Visit Us</h3>
+        <p class="text-gray-400">
+          Near Govt HSS <br>
+          karamana,trivandrum
+        </p>
+      </div>
+
+      <!-- Call Us -->
+      <div class="bg-gray-900 p-8 rounded-2xl text-center border border-gray-800 hover:border-orange-500 transition">
+        <i class="fas fa-phone text-4xl text-orange-500 mb-4"></i>
+        <h3 class="text-2xl font-bold text-white mb-2">Call Us</h3>
+        <p class="text-gray-400">
+         +91 9495945495 <br>
+          Mon – Sat : 8AM – 8PM
+        </p>
+      </div>
+
+      <!-- Email Us -->
+      <div class="bg-gray-900 p-8 rounded-2xl text-center border border-gray-800 hover:border-orange-500 transition">
+        <i class="fas fa-envelope text-4xl text-orange-500 mb-4"></i>
+        <h3 class="text-2xl font-bold text-white mb-2">Email Us</h3>
+        <p class="text-gray-400">
+             guaranteeservicecentre@gmail.com        </p>
+      </div>
+
+    </div>
+
+    <!-- Contact Form -->
+    <div class="max-w-4xl mx-auto bg-gray-900 p-10 rounded-3xl border border-gray-800 shadow-2xl">
+
+      <h3 class="text-3xl font-bold text-white text-center mb-8">
+        Book Washing Machine Service
+      </h3>
+
+      <form action="#" method="POST" class="space-y-6">
+
+        <div>
+          <label class="text-gray-300 block mb-2">Full Name *</label>
+          <input type="text" required
+            class="w-full p-4 rounded-lg bg-black border border-gray-700 text-white focus:border-orange-500 focus:outline-none">
+        </div>
+
+        <div>
+          <label class="text-gray-300 block mb-2">Phone Number *</label>
+          <input type="tel" required
+            class="w-full p-4 rounded-lg bg-black border border-gray-700 text-white focus:border-orange-500 focus:outline-none">
+        </div>
+
+        <div>
+          <label class="text-gray-300 block mb-2">Brand *</label>
+          <input type="text" required placeholder="LG / Samsung / Whirlpool..."
+            class="w-full p-4 rounded-lg bg-black border border-gray-700 text-white focus:border-orange-500 focus:outline-none">
+        </div>
+
+        <div>
+          <label class="text-gray-300 block mb-2">Issue Description *</label>
+          <textarea rows="4" required
+            class="w-full p-4 rounded-lg bg-black border border-gray-700 text-white focus:border-orange-500 focus:outline-none"></textarea>
+        </div>
+
+        <button type="submit"
+          class="w-full bg-orange-500 hover:bg-orange-600 text-white py-4 rounded-full text-lg font-bold transition-all">
+          Book Service Now
+        </button>
+
+      </form>
+    </div>
+
+  </div>
+</section>
+
+    <!-- Map Section -->
+<section class="bg-black py-24 px-6">
+  <div class="max-w-7xl mx-auto">
+    
+    <h2 class="text-5xl md:text-6xl font-bold text-center text-white mb-16">
+      Visit Our Service Center
+    </h2>
+
+    <div class="w-full h-[600px] md:h-[550px] rounded-3xl overflow-hidden shadow-2xl border border-gray-800">
+      
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15784.818994576242!2d76.96890792181163!3d8.479462160768984!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b05bb3c93adb247%3A0xd16b38cbd3ab78c2!2sGuarantee%20service%20centre%3Awashing%20machine%20service%20centre!5e0!3m2!1sen!2sin!4v1771061291574!5m2!1sen!2sin"
+        width="100%" 
+        height="100%" 
+        style="border:0;" 
+        allowfullscreen="" 
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+
+    </div>
+
+  </div>
+</section>
+
+    <!-- FOOTER -->
+    <footer class="main-footer">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="footer-logo">Guarantee Service Center</div>
+          <p class="footer-desc">
+            Guarantee Service Center is a leading and reliable washing machine repair and maintenance company dedicated to providing fast, affordable, and professional appliance service solutions. With years of hands-on experience in home appliance servicing, we specialize exclusively in washing machine repair, installation, maintenance, and spare parts replacement for all major brands and models.
+          </p>
+           <p style="color: #979c98; text-align: left;">Copyright © 2026 Gurantee Service Center. All rights reserved.</p>
+        </div>
+
+        <div class="footer-col">
+          
+          <!-- <img
+            src="images/Google My Business (1).png"
+            alt="Scan to open Base Performance Web App"
+            class="promo-qr"
+          /> -->
+         
+          <div class="social-icons">
+            
+            <!-- <i class="fab fa-youtube"></i> -->
+            <!-- <i class="fab fa-facebook-f"></i> -->
+            <!-- <i class="fab fa-twitter"></i> -->
+            <a href="https://www.instagram.com/baseperformanceofficial?igsh=b3RheHp3dzM0YWhn" target="_blank">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://wa.me/917356289930" target="_blank">
+              <i class="fab fa-whatsapp"></i>
+            </a>
+             <a style="color: #979c98;" href="https://scipytechnologies.com/" target="_blank">
+             Developed by Scipy Technologies
+            </a>
+          </div>
+        </div>
+      </div>
+
+    
+
+    <script src="script.js"></script>
+  </body>
+</html>

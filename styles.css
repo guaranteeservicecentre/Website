@@ -1,0 +1,1079 @@
+/* =========================
+   RESET & BASE
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background: #f8fafc;
+    color: #1e293b;
+    overflow-x: hidden;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 50;
+    transition: all 0.3s;
+}
+
+.navbar.scrolled {
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.navbar.scrolled a {
+    color: #2d3748 !important;
+}
+
+.navbar.scrolled a:hover {
+    color: #4299e1 !important;
+}
+
+#navbar a:hover {
+    color: #4299e1;
+}
+
+
+
+/* =========================
+   HERO IMAGE CAROUSEL
+========================= */
+
+.hero-carousel {
+    position: absolute;
+    inset: 0;
+}
+
+.carousel-img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1.4s ease-in-out, transform 6s ease;
+    transform: scale(1.08);
+}
+
+.carousel-img.active {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* CTA button theme-safe */
+.cta-button {
+    background: #4299e1;
+    color: white;
+    padding: 16px 42px;
+    border-radius: 999px;
+    font-size: 1.25rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 16px 40px rgba(66, 153, 225, 0.35);
+}
+
+.cta-button:hover {
+    background: #3182ce;
+}
+
+.hero-bg {
+    transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.herocontent {
+    background-color: #3b3c3d99;
+     position: absolute;
+    bottom: 0;   /* Moves to bottom */
+    width: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 30px 0px;
+    text-align: center;
+    
+}
+.hero-content h1 {
+    color: rgb(202, 202, 205);
+    /* -webkit-text-stroke: 1.5px rgba(0, 0, 0, 0.4); */
+
+
+}
+
+.hero-content p {
+    color: rgb(221, 221, 225);
+    text-align: center;
+    /* -webkit-text-stroke: 1.5px rgba(0, 0, 0, 0.4); */
+}
+
+.hero-content .cta-button {
+    background: #4299e1;
+    color: white;
+    border-radius: 999px;
+    padding: 14px 32px;
+    font-weight: 600;
+    box-shadow: 0 12px 30px rgba(66, 153, 225, 0.35);
+}
+
+.hero-content .cta-button:hover {
+    background: #3182ce;
+}
+
+/* Hero Fade */
+.hero-content h1,
+.hero-content p,
+.hero-content .cta-button,
+.hero-content .chevron {
+    animation: fadeInUp 1s ease-out forwards;
+}
+
+.hero-content h1 {
+    animation-delay: 0.6s;
+}
+
+.hero-content p {
+    animation-delay: 1.2s;
+}
+
+.hero-content .cta-button {
+    animation-delay: 1.8s;
+}
+
+.hero-content .chevron {
+    animation-delay: 2.6s;
+}
+
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(80px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* =========================
+   PARALLAX & SECTIONS
+========================= */
+
+.parallax-section {
+    position: relative;
+}
+
+.parallax-bg,
+.parallax-content,
+.sticky-section,
+.sticky-content,
+.reveal-bg,
+.scale-section {
+    will-change: transform, opacity;
+}
+
+.sticky-section2  {
+    will-change: transform, opacity;
+  position: sticky;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -10000;
+}
+#facilities {
+  position: relative;
+  z-index: 5;
+  background: #1e293b !important;
+}
+
+
+/* =========================
+   CARDS
+========================= */
+
+.court-card,
+.membership-card {
+    background: white;
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+    transition: all 0.35s ease;
+}
+
+.court-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(56, 189, 248, 0.15);
+}
+
+.membership-card:hover {
+    transform: translateY(-14px) scale(1.04);
+    box-shadow: 0 15px 40px rgba(56, 189, 248, 0.15);
+}
+
+/* Court Card Accents */
+.court-card .bg-orange-500 {
+    background: #4299e1 !important;
+}
+
+.court-card .bg-orange-500:hover {
+    background: #3182ce !important;
+}
+
+.court-card .text-orange-500 {
+    color: #4299e1 !important;
+}
+
+.court-card button.bg-orange-500 {
+    background: #4299e1 !important;
+}
+
+.court-card button.bg-orange-500:hover {
+    background: #3182ce !important;
+}
+
+/* =========================
+   FEATURES SECTION
+========================= */
+
+#facilities {
+    background: #1e293b !important;
+}
+
+#facilities .bg-orange-500 {
+    background: #4299e1 !important;
+}
+
+/* =========================
+   MEMBERSHIP SECTION
+========================= */
+
+#membership {
+    background: #f1f5f9 !important;
+}
+
+#membership h2 {
+    color: #0f172a !important;
+}
+
+#membership .membership-card .bg-orange-500,
+#membership .membership-card.bg-orange-500 {
+    background: #4299e1 !important;
+}
+
+#membership .membership-card .text-orange-500 {
+    color: #4299e1 !important;
+}
+
+#membership .membership-card button.bg-orange-500 {
+    background: #4299e1 !important;
+}
+
+#membership .membership-card button.bg-orange-500:hover {
+    background: #3182ce !important;
+}
+
+#membership .membership-card button.text-orange-500 {
+    color: #4299e1 !important;
+}
+
+/* =========================
+   CTA SECTION
+========================= */
+
+#book-now {
+    background: #1e293b !important;
+}
+
+#book-now button.bg-orange-500 {
+    background: #4299e1 !important;
+}
+
+#book-now button.bg-orange-500:hover {
+    background: #3182ce !important;
+}
+
+/* =========================
+   FEATURES
+========================= */
+
+.feature-item,
+.fade-in-element {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.7s ease;
+}
+
+.feature-item.visible,
+.fade-in-element.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Features Grid Alignment */
+#facilities .grid {
+    display: grid;
+    align-items: center;
+}
+
+#facilities .grid.grid-cols-1 {
+    grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) {
+    #facilities .grid.md\:grid-cols-2 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    #facilities .grid.lg\:grid-cols-4 {
+        grid-template-columns: repeat(3, 1fr);
+        justify-items: center;
+    }
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+button {
+    cursor: pointer;
+    transition: transform 0.25s ease;
+}
+
+button:hover {
+    transform: scale(1.08);
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+/* =========================
+   SCROLLBAR
+========================= */
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #e2e8f0;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #4299e1;
+    border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #3182ce;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+/* Footer Styles */
+.main-footer {
+    background: #2d3748;
+    padding: 70px 1rem 30px;
+    font-size: 0.9rem;
+}
+
+.footer-grid {
+    max-width: 1300px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 4rem;
+    padding-bottom: 40px;
+    border-bottom: 1px solid #4a5568;
+    align-items: center;
+}
+
+.footer-col {
+    min-width: 200px;
+}
+
+.footer-col:first-child {
+    text-align: center;
+}
+
+.footer-col:last-child {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.footer-logo {
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.footer-logo span {
+    color: #cbd5e0;
+}
+
+.footer-desc {
+    color: #a0aec0;
+    font-size: 0.85rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+.footer-col h4 {
+    color: white;
+    font-size: 1rem;
+    margin-bottom: 1.25rem;
+    font-weight: 600;
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-col ul li {
+    margin-bottom: 0.75rem;
+}
+
+.footer-col ul li a {
+    color: #a0aec0;
+    text-decoration: none;
+    transition: 0.2s ease;
+    font-size: 0.9rem;
+}
+
+.footer-col ul li a:hover {
+    color: #4299e1;
+}
+
+.social-icons {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 0;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-icons i {
+    color: #a0aec0;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.social-icons i:hover {
+    color: #4299e1;
+    transform: translateY(-2px);
+}
+
+.promo-qr {
+    margin-top: 1.5rem;
+    width: 92px;
+    height: 92px;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+.footer-bottom {
+    text-align: center;
+    color: #718096;
+    font-size: 0.75rem;
+    margin-top: 2rem;
+    padding: 0 1rem;
+    line-height: 1.6;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 3rem;
+    }
+
+    .membership-card {
+        margin-bottom: 2rem;
+    }
+
+    /* Mobile Footer */
+    .main-footer {
+        padding: 50px 1rem 20px;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding-bottom: 30px;
+    }
+
+    .footer-col {
+        text-align: center;
+    }
+
+    .footer-col:last-child {
+        flex-direction: row;
+        gap: 2rem;
+    }
+
+    .footer-logo {
+        font-size: 1.2rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .footer-desc {
+        font-size: 0.8rem;
+        margin-bottom: 1rem;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+
+    .promo-qr {
+        margin: 0;
+    }
+
+    .footer-bottom {
+        font-size: 0.7rem;
+    }
+}
+
+/* =========================
+   TABLET & MEDIUM SCREENS
+========================= */
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .hero-content h1 {
+        font-size: 3.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .hero-content p {
+        font-size: 1.2rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .court-card,
+    .membership-card {
+        padding: 2.5rem;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr auto;
+        gap: 3rem;
+    }
+
+    .main-footer {
+        padding: 60px 2rem 40px;
+    }
+
+    .footer-logo {
+        font-size: 1.3rem;
+    }
+
+    .footer-desc {
+        font-size: 0.88rem;
+    }
+
+    .footer-col h4 {
+        font-size: 0.95rem;
+    }
+
+    .footer-col ul li a {
+        font-size: 0.88rem;
+    }
+}
+
+/* =========================
+   DESKTOP SCREENS
+========================= */
+
+@media (min-width: 1025px) and (max-width: 1440px) {
+    .hero-content h1 {
+        font-size: 4rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .hero-content p {
+        font-size: 1.4rem;
+        margin-bottom: 2rem;
+    }
+
+    .court-card,
+    .membership-card {
+        padding: 3rem;
+    }
+
+    .court-card:hover {
+        transform: translateY(-15px);
+    }
+
+    .membership-card:hover {
+        transform: translateY(-18px) scale(1.05);
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr auto;
+        gap: 4rem;
+        max-width: 1400px;
+    }
+
+    .footer-col {
+        min-width: auto;
+    }
+
+    .main-footer {
+        padding: 80px 2rem 40px;
+    }
+
+    .footer-logo {
+        font-size: 1.5rem;
+    }
+
+    .footer-desc {
+        font-size: 0.9rem;
+    }
+
+    .footer-col h4 {
+        font-size: 1.05rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .footer-col ul li a {
+        font-size: 0.92rem;
+    }
+
+    .promo-qr {
+        width: 110px;
+        height: 110px;
+    }
+
+    /* Enhanced spacing for desktop */
+    .cta-button {
+        padding: 18px 48px;
+        font-size: 1.3rem;
+    }
+}
+
+/* =========================
+   EXTRA LARGE SCREENS
+========================= */
+
+@media (min-width: 1441px) {
+    body {
+        font-size: 1.05rem;
+    }
+
+    .hero-content h1 {
+        font-size: 4.5rem;
+        margin-bottom: 2rem;
+        letter-spacing: -0.02em;
+    }
+
+    .hero-content p {
+        font-size: 1.6rem;
+        margin-bottom: 2.5rem;
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .court-card,
+    .membership-card {
+        padding: 3.5rem;
+    }
+
+    .court-card:hover {
+        transform: translateY(-20px);
+        box-shadow: 0 20px 50px rgba(56, 189, 248, 0.2);
+    }
+
+    .membership-card:hover {
+        transform: translateY(-22px) scale(1.06);
+        box-shadow: 0 20px 50px rgba(56, 189, 248, 0.2);
+    }
+
+    /* Footer for Extra Large Screens */
+    .main-footer {
+        padding: 100px 3rem 50px;
+        font-size: 0.95rem;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr auto;
+        gap: 5rem;
+        max-width: 1800px;
+        padding-bottom: 50px;
+    }
+
+    .footer-logo {
+        font-size: 1.6rem;
+        margin-bottom: 1.2rem;
+    }
+
+    .footer-desc {
+        font-size: 0.95rem;
+        margin-bottom: 2rem;
+    }
+
+    .footer-col h4 {
+        font-size: 1.1rem;
+        margin-bottom: 1.75rem;
+    }
+
+    .footer-col ul li {
+        margin-bottom: 1rem;
+    }
+
+    .footer-col ul li a {
+        font-size: 0.95rem;
+    }
+
+    .social-icons {
+        gap: 1.5rem;
+        margin-top: 0;
+    }
+
+    .social-icons i {
+        font-size: 1.4rem;
+    }
+
+    .promo-qr {
+        width: 120px;
+        height: 120px;
+    }
+
+    .footer-bottom {
+        font-size: 0.8rem;
+        margin-top: 3rem;
+    }
+
+    /* Larger buttons */
+    .cta-button {
+        padding: 20px 56px;
+        font-size: 1.4rem;
+    }
+
+    .cta-button:hover {
+        box-shadow: 0 20px 50px rgba(66, 153, 225, 0.4);
+    }
+
+    /* Feature items with enhanced spacing */
+    .feature-item {
+        padding: 2rem;
+    }
+
+    /* Improved card transitions */
+    button:hover {
+        transform: scale(1.12);
+    }
+}
+
+/* =========================
+   PERFORMANCE
+========================= */
+
+.parallax-bg,
+.sticky-content,
+.reveal-bg,
+.scale-section,
+.hero-bg {
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+}
+
+.logo {
+    max-width: 300px;
+    width: 150px;
+}
+.logo img{
+    width:200%;
+}
+
+/* =========================
+   TAILWIND OVERRIDES - Orange to Blue Theme
+========================= */
+
+/* Override Tailwind orange-500 to blue */
+.bg-orange-500 {
+    background-color: #4299e1 !important;
+}
+
+.hover\:bg-orange-500:hover {
+    background-color: #4299e1 !important;
+}
+
+.text-orange-500 {
+    color: #4299e1 !important;
+}
+
+.hover\:text-orange-500:hover {
+    color: #4299e1 !important;
+}
+
+/* Override Tailwind orange-600 to darker blue */
+.bg-orange-600 {
+    background-color: #3182ce !important;
+}
+
+.hover\:bg-orange-600:hover {
+    background-color: #3182ce !important;
+}
+
+.border-orange-500 {
+    border-color: #4299e1 !important;
+}
+
+@media (max-width: 768px) {
+
+    /* Section height fix */
+    #reveal-section {
+        height: auto !important;
+        min-height: 100vh;
+    }
+
+    /* Disable sticky on mobile */
+    #reveal-section .sticky {
+        position: relative !important;
+        top: auto !important;
+        height: auto !important;
+    }
+
+    /* Background fix */
+    .reveal-bg {
+        position: absolute;
+        inset: 0;
+    }
+
+    /* Content spacing */
+    .reveal-content {
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+    }
+
+    /* Title scaling */
+    .reveal-title {
+        font-size: 1.8rem !important;
+        line-height: 1.3;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+    }
+
+    .reveal-subtitle {
+        font-size: 1rem !important;
+    }
+
+    /* Grid fix */
+    .reveal-content .grid {
+        grid-template-columns: 1fr !important;
+        gap: 1.5rem;
+        margin-top: 3rem;
+    }
+
+    /* Feature cards */
+    .reveal-feature {
+        padding: 1.5rem;
+        border-radius: 1rem;
+    }
+
+    .reveal-feature h3 {
+        font-size: 1.3rem;
+    }
+
+    .reveal-feature p {
+        font-size: 0.95rem;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    #reveal-section {
+        height: auto !important;
+        min-height: 100vh;
+    }
+
+    #reveal-section .sticky {
+        position: relative !important;
+        top: auto !important;
+        height: auto !important;
+    }
+
+    .reveal-bg {
+        position: absolute;
+        inset: 0;
+    }
+
+    .reveal-content {
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+    }
+
+    .reveal-title {
+        font-size: 2.8rem !important;
+        line-height: 1.3;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+    }
+
+    .reveal-subtitle {
+        font-size: 1.1rem !important;
+    }
+
+    .reveal-content .grid {
+        grid-template-columns: 1fr !important;
+        gap: 1.5rem;
+        margin-top: 3rem;
+    }
+
+    .reveal-feature {
+        padding: 2rem;
+        border-radius: 1.2rem;
+    }
+
+    .reveal-feature h3 {
+        font-size: 1.4rem;
+    }
+
+    .reveal-feature p {
+        font-size: 0.98rem;
+    }
+}
+
+@media (min-width: 1025px) {
+    #reveal-section {
+        height: auto !important;
+        min-height: 100vh;
+    }
+
+    #reveal-section .sticky {
+        position: relative !important;
+        top: auto !important;
+        height: auto !important;
+    }
+
+    .reveal-bg {
+        position: absolute;
+        inset: 0;
+    }
+
+    .reveal-content {
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+    }
+
+    .reveal-title {
+        font-size: 3.5rem !important;
+        line-height: 1.3;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        max-width: 100%;
+    }
+
+    .reveal-subtitle {
+        font-size: 1.2rem !important;
+    }
+
+    .reveal-content .grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 2rem;
+        margin-top: 3rem;
+    }
+
+    .reveal-feature {
+        padding: 2.5rem;
+        border-radius: 1.5rem;
+    }
+
+    .reveal-feature h3 {
+        font-size: 1.5rem;
+    }
+
+    .reveal-feature p {
+        font-size: 1rem;
+    }
+}
+
+
+/* Brand Carousel */
+.brand-carousel {
+    width: 100%;
+    overflow: hidden;
+    background: #ffffff;
+    padding: 40px 0;
+    margin-top: 80px;
+}
+
+.brand-track {
+    display: flex;
+    width: max-content;
+    animation: scrollLeft 25s linear infinite;
+}
+
+.brand-track img {
+    height: 40px;
+    margin: 0 60px;
+    object-fit: contain;
+    filter: grayscale(100%);
+    transition: 0.3s;
+}
+
+.brand-track img:hover {
+    filter: grayscale(0%);
+}
+
+/* Animation */
+@keyframes scrollLeft {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+/* =========================================
+   iPad Safari Parallax Safe Fix
+========================================= */
+
+@supports (-webkit-touch-callout: none) {
+
+  /* Fix viewport height bug */
+  .h-screen {
+    height: 100svh !important;   /* Safari safe height */
+  }
+
+  /* Keep sticky working */
+  .sticky-section,
+  .sticky-section2 {
+    position: sticky;
+    top: 0;
+    height: 100svh;
+  }
+
+  /* Prevent black overflow gap */
+  html, body {
+    overflow-x: hidden;
+    background: #f8fafc;
+  }
+
+}
