@@ -29,7 +29,152 @@ window.addEventListener('scroll', () => {
 });
 
 
+/* ===============================/* ===============================
+   MOBILE MENU
+================================ */
+const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+const mobileMenu = document.getElementById('mobile-menu');
+
+mobileMenuBtn?.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+});
+
+mobileMenu?.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+    });
+});
+
+
 /* ===============================
+   NAVBAR SCROLL EFFECT
+================================ */
+const navbar = document.getElementById('navbar');
+
+window.addEventListener('scroll', () => {
+    if (window.pageYOffset > 50) {
+        navbar?.classList.add('scrolled');
+    } else {
+        navbar?.classList.remove('scrolled');
+    }
+});
+
+
+/* ===============================
+   HERO PARALLAX (SLOWED)
+================================ */
+const hero = document.getElementById('hero');
+
+if (hero) {
+    const heroBg = hero.querySelector('.hero-bg');
+    const heroContent = hero.querySelector('.hero-content');
+
+    window.addEventListener('scroll', () => {
+        const scrolled = window.pageYOffset;
+        const heroHeight = hero.offsetHeight;
+
+        if (scrolled < heroHeight) {
+            const yPos = scrolled * 0.25;
+            const scale = 1 + (scrolled / heroHeight) * 0.04;
+            const opacity = 1 - (scrolled / heroHeight);
+            const textY = scrolled * 0.12;
+
+            heroBg.style.transform = `translateY(${yPos}px) scale(${scale})`;
+            heroContent.style.opacity = opacity;
+            heroContent.style.transform = `translateY(-${textY}px)`;
+        }
+    });
+}
+
+
+/* ===============================
+   INTERSECTION OBSERVER
+================================ */
+const observerOptions = {
+    threshold: 0.2,
+    rootMargin: '0px 0px -120px 0px'
+};
+
+const fadeObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+        }
+    });
+}, observerOptions);
+
+document.querySelectorAll('.fade-in-element').forEach(el => fadeObserver.observe(el));
+
+
+/* ===============================
+   SMOOTH ANCHOR SCROLL
+================================ */
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', e => {
+        e.preventDefault();
+        document.querySelector(anchor.getAttribute('href'))
+            ?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+});
+
+
+/* ===============================
+   IMAGE CAROUSEL
+================================ */
+const slides = document.querySelectorAll('.carousel-img');
+let currentSlide = 0;
+
+if (slides.length > 0) {
+    setInterval(() => {
+        slides[currentSlide].classList.remove('active');
+        currentSlide = (currentSlide + 1) % slides.length;
+        slides[currentSlide].classList.add('active');
+    }, 3000);
+}
+
+
+console.log('✅ Base Performance – Cinematic Scroll Loaded');
+
+
+/* ===============================
+   GOOGLE SHEET FORM SUBMISSION
+================================ */
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const form = document.getElementById("serviceForm");
+    if (!form) return;
+
+    form.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        const formData = {
+            fullName: form.querySelector('[name="fullName"]').value,
+            phone: form.querySelector('[name="phone"]').value,
+            brand: form.querySelector('[name="brand"]').value,
+            issue: form.querySelector('[name="issue"]').value
+        };
+
+        fetch("https://script.google.com/macros/s/AKfycbz4Xs9VsWrDYw2QfV8_g5QrkVhpK8ZKy8m0pklZsUw/exec", {
+            method: "POST",
+            body: JSON.stringify(formData),
+            headers: {
+                "Content-Type": "application/json"
+            }
+        })
+        .then(response => response.text())
+        .then(data => {
+            alert("✅ Service booked successfully!");
+            form.reset();
+        })
+        .catch(error => {
+            console.error("Error:", error);
+            alert("❌ Something went wrong. Please try again.");
+        });
+
+    });
+
+});
    HERO PARALLAX (SLOWED)
 ================================ */
 const hero = document.getElementById('hero');
