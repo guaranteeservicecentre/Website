@@ -787,11 +787,16 @@ document.getElementById("serviceForm").addEventListener("submit", function(e) {
   e.preventDefault();
 
   const form = this;
-  const formData = new FormData(form);
 
-  fetch("https://script.google.com/macros/s/AKfycbyGEs5FyB2UC9rWN6--_bG9IAn6EmoMDYPjXiL7Xe4cj0BJ1tVoCHDRTaW9rQRuza8/exec", {
+  const params = new URLSearchParams();
+  params.append("name", form.name.value);
+  params.append("phone", form.phone.value);
+  params.append("subject", form.subject.value);
+  params.append("message", form.message.value);
+
+  fetch("https://script.google.com/macros/s/AKfycbx7lIOPWAOu-oIl1NHYM4Qe1Fb0GXu1ZAMaET5PgZdjhgkO0e6_mWgkK2u2lG31j68/exec", {
     method: "POST",
-    body: formData
+    body: params
   })
   .then(response => response.json())
   .then(data => {
@@ -799,7 +804,8 @@ document.getElementById("serviceForm").addEventListener("submit", function(e) {
     form.reset();
   })
   .catch(error => {
-    alert("Something went wrong. Please try again.");
+    alert("Submission failed");
+    console.error(error);
   });
 });
 </script>
