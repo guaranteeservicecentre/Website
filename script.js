@@ -258,7 +258,4 @@ console.log('✅ Base Performance – Cinematic Scroll Loaded');
     }, 3000); // 5 seconds per slide
 
 
-    document.getElementById("serviceForm").addEventListener("submit", function(e) {
-   e.preventDefault();
-   // fetch(...)
-});
+  
