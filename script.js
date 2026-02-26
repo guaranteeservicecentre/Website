@@ -258,4 +258,91 @@ console.log('✅ Base Performance – Cinematic Scroll Loaded');
     }, 3000); // 5 seconds per slide
 
 
+ // Form Submission to Google Sheets
+const form = document.getElementById("contactForm");
+const successMessage = document.getElementById("formMessage");
+const errorMessage = document.getElementById("errorMessage");
+const btnText = document.getElementById("btnText");
+const btnLoader = document.getElementById("btnLoader");
+
+// REPLACE THIS WITH YOUR ACTUAL GOOGLE APPS SCRIPT WEB APP URL
+const scriptURL = "https://script.google.com/macros/s/AKfycbws2iUpz9UawVZg3KhPRAFjWnFUKMNFFT4GHaP0Jhs6G9pPnF8t3o2GEIXG1NVg5bo/exec";
+
+// IMPORTANT: Prevent default form submission and page reload
+form.addEventListener("submit", async (e) => {
+  e.preventDefault(); // This prevents page reload and scrolling to top
   
+  // Hide any previous messages
+  if (successMessage) successMessage.style.display = "none";
+  if (errorMessage) errorMessage.style.display = "none";
+  
+  // Validate form
+  const name = document.getElementById("name").value.trim();
+  const email = document.getElementById("email").value.trim();
+  const subject = document.getElementById("subject").value;
+  const message = document.getElementById("message").value.trim();
+  
+  if (!name || !email || !subject || !message) {
+    errorMessage.innerHTML = '<i class="fas fa-exclamation-circle"></i> Please fill in all required fields.';
+    errorMessage.style.display = "block";
+    return;
+  }
+  
+  // Email validation
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailRegex.test(email)) {
+    errorMessage.innerHTML = '<i class="fas fa-exclamation-circle"></i> Please enter a valid email address.';
+    errorMessage.style.display = "block";
+    return;
+  }
+
+  // Show loader
+  if (btnText) btnText.style.display = "none";
+  if (btnLoader) btnLoader.style.display = "inline";
+  if (form.querySelector(".submit-btn")) form.querySelector(".submit-btn").disabled = true;
+
+  const formData = new FormData(form);
+  formData.append("timestamp", new Date().toLocaleString());
+
+  try {
+    // Actual submission to Google Apps Script
+    const response = await fetch(scriptURL, {
+      method: "POST",
+      body: formData,
+      mode: "no-cors",  // Keep as no-cors for Google Apps Script
+    });
+    
+    // Show success message (with no-cors we assume success)
+    if (successMessage) {
+      successMessage.style.display = "block";
+      successMessage.innerHTML = '✅ Service request submitted successfully!';
+    }
+    form.reset();
+
+    // Scroll to success message smoothly
+    if (successMessage) {
+      successMessage.scrollIntoView({
+        behavior: "smooth",
+        block: "center",
+      });
+    }
+
+    // Hide success message after 5 seconds
+    setTimeout(() => {
+      if (successMessage) successMessage.style.display = "none";
+    }, 5000);
+    
+  } catch (error) {
+    console.error("Error!", error);
+    if (errorMessage) {
+      errorMessage.innerHTML = '<i class="fas fa-exclamation-circle"></i> Unable to send message. Please try again or contact us directly.';
+      errorMessage.style.display = "block";
+      errorMessage.scrollIntoView({ behavior: "smooth", block: "center" });
+    }
+  } finally {
+    // Reset button
+    if (btnText) btnText.style.display = "inline";
+    if (btnLoader) btnLoader.style.display = "none";
+    if (form.querySelector(".submit-btn")) form.querySelector(".submit-btn").disabled = false;
+  }
+}); // <-- This closing bracket and parenthesis are now correct!
